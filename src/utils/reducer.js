@@ -8,7 +8,7 @@ export const initialState = {
     currentPlaying: null,
     playerState: false,
     selectedPlaylist: null,
-    selectedPlaylistId: "37i9dQZF1E37jO8SiMT0yN",
+    selectedPlaylistId: "6MoIQeKXq9hp5FHtsM5gWp",
 };
 
 const reducer = (state, action) => {
@@ -18,7 +18,7 @@ const reducer = (state, action) => {
                 ...state,
                 token: action.token,
             };
-        case reducerCases.SET_PLAYLISTS:
+        case reducerCases.SET_PLAYLISTS: //for sidebar
             return {
                 ...state,
                 playlists: action.playlists,
@@ -27,6 +27,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 userInfo: action.userInfo,
+            };
+        case reducerCases.SET_PLAYLIST: //for body
+            return {
+                ...state,
+                selectedPlaylist: action.selectedPlaylist,
             };
         default:
             return state;

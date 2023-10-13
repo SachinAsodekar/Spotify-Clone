@@ -4,7 +4,7 @@ import { useStateProvider } from "../utils/StateProvider";
 import { FaSearch } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 
-export default function Navbar({navBackground}) {
+export default function Navbar(navBackground) {
 
     const [{ userInfo }] = useStateProvider();
 

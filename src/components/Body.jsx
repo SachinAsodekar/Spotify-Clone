@@ -31,7 +31,7 @@ export default function Body({ headerBackground }) {
                     id: track.id,
                     name: track.name,
                     artists: track.artists.map((artist) => artist.name),
-                    //image: track.album.images[2].url,
+                    image: track.album.images[0] ? track.album.images[0].url : "",
                     duration: track.duration_ms,
                     album: track.album.name,
                     context_uri: track.album.uri,
@@ -105,7 +105,7 @@ export default function Body({ headerBackground }) {
                                             </div>
                                             <div className="col detail">
                                                 <div className="image">
-                                                    <img src='https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228' alt="track" />
+                                                    <img src={image} alt="track" />
                                                 </div>
                                                 <div className="info">
                                                     <span className="name">{name}</span>

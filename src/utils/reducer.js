@@ -9,7 +9,7 @@ export const initialState = {
     playerState: false,
     selectedPlaylist: null,
     selectedPlaylistId: "37i9dQZF1E37jO8SiMT0yN",
-  };
+};
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -19,9 +19,14 @@ const reducer = (state, action) => {
                 token: action.token,
             };
         case reducerCases.SET_PLAYLISTS:
-            return{
+            return {
                 ...state,
                 playlists: action.playlists,
+            };
+        case reducerCases.SET_USER:
+            return {
+                ...state,
+                userInfo: action.userInfo,
             };
         default:
             return state;
